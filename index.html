@@ -2,43 +2,43 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Quiz</title>
   <link rel="stylesheet" href="quiz.css" />
 </head>
 <body>
 
-<div class="app">
+  <main class="app">
+    <!-- START -->
+    <section class="start-screen" id="startScreen">
+      <h1 class="title">Quiz</h1>
+      <p class="subtitle">50 perguntas difíceis • A–D</p>
+      <button id="startBtn" class="btn btn-primary">Iniciar jogo</button>
+    </section>
 
-  <div class="start-screen" id="startScreen">
-    <h1>Quiz</h1>
-    <button id="startBtn">Iniciar jogo</button>
-  </div>
+    <!-- GAME -->
+    <section class="quiz-screen hidden" id="quizScreen">
+      <header class="topbar">
+        <div class="pill" id="progress">Pergunta 1/50</div>
+        <div class="pill pill-timer">Leitura: <span id="timer">10</span>s</div>
+      </header>
 
-  <div class="quiz-screen hidden" id="quizScreen">
-    <div class="top">
-      <span id="timer">10s</span>
-    </div>
+      <h2 id="question" class="question"></h2>
 
-    <h2 id="question"></h2>
+      <div id="options" class="options hidden"></div>
 
-    <div id="options" class="options hidden"></div>
+      <div class="actions hidden" id="actions">
+        <button id="hintBtn" class="btn btn-dark">Dica</button>
+        <button id="revealBtn" class="btn btn-dark">Revelar</button>
+      </div>
 
-    <div class="actions hidden">
-      <button id="hintBtn">Dica</button>
-      <button id="revealBtn">Revelar</button>
-    </div>
+      <button id="nextBtn" class="btn btn-accent hidden">Próxima pergunta</button>
 
-    <button id="nextBtn" class="hidden">Próxima pergunta</button>
+      <p id="feedback" class="feedback"></p>
+    </section>
+  </main>
 
-    <p id="feedback"></p>
-  </div>
-
-</div>
-
-<!-- ⚠️ SCRIPT NO FINAL (OBRIGATÓRIO) -->
-<script src="quiz.js"></script>
+  <!-- Script SEMPRE no final -->
+  <script src="quiz.js"></script>
 </body>
 </html>
-
-
