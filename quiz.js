@@ -1,3 +1,12 @@
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
+const quizScreen = document.getElementById("quizScreen");
+
+startBtn.onclick = () => {
+  startScreen.classList.add("hidden");
+  quizScreen.classList.remove("hidden");
+  loadQuestion();
+};
 const questions = [
   {
     text: "Qual estrutura celular é responsável pela síntese de proteínas?",
@@ -214,3 +223,4 @@ const questions = [
     hint: "Abertura política."
   }
 ];
+
