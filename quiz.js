@@ -1,464 +1,216 @@
-// ==================================================
-// 50 PERGUNTAS
-// ==================================================
 const questions = [
-  // -------- FÁCEIS (1–20)
   {
-    text: "Qual órgão do corpo humano bombeia o sangue?",
-    options: { A: "Pulmão", B: "Cérebro", C: "Coração", D: "Fígado" },
-    answer: "C",
-    hint: "Ele bate sem parar."
-  },
-  {
-    text: "Qual planeta é conhecido como planeta vermelho?",
-    options: { A: "Terra", B: "Marte", C: "Vênus", D: "Júpiter" },
-    answer: "B",
-    hint: "Deus da guerra."
-  },
-  {
-    text: "Quanto é 7 × 8?",
-    options: { A: "54", B: "56", C: "58", D: "64" },
-    answer: "B",
-    hint: "Mais que 55."
-  },
-  {
-    text: "Quanto é 100 ÷ 4?",
-    options: { A: "20", B: "25", C: "40", D: "50" },
-    answer: "B",
-    hint: "Um quarto de 100."
-  },
-  {
-    text: "Plural de cidadão é:",
-    options: { A: "Cidadões", B: "Cidadãos", C: "Cidadães", D: "Cidadõeses" },
-    answer: "B",
-    hint: "Termina com ãos."
-  },
-  {
-    text: "Qual palavra está correta?",
-    options: { A: "Exceção", B: "Excessão", C: "Exesão", D: "Exeção" },
+    text: "Qual estrutura celular é responsável pela síntese de proteínas?",
+    options: { A: "Ribossomos", B: "Lisossomos", C: "Mitocôndrias", D: "Centríolos" },
     answer: "A",
-    hint: "Sem SS."
+    hint: "Ligada ao RNA."
   },
   {
-    text: "Em que ano o Brasil foi descoberto?",
-    options: { A: "1492", B: "1500", C: "1530", D: "1822" },
+    text: "Qual é o valor de log₁₀(1000)?",
+    options: { A: "1", B: "3", C: "10", D: "100" },
     answer: "B",
-    hint: "Século XVI."
+    hint: "Potência de 10."
   },
   {
-    text: "Primeiro presidente do Brasil?",
-    options: { A: "Getúlio Vargas", B: "Deodoro da Fonseca", C: "Dom Pedro I", D: "JK" },
-    answer: "B",
-    hint: "Era marechal."
-  },
-  {
-    text: "Capital do Brasil?",
-    options: { A: "São Paulo", B: "Rio de Janeiro", C: "Brasília", D: "Salvador" },
+    text: "Em qual alternativa o 'porquê' está corretamente empregado?",
+    options: {
+      A: "Não sei porquê você faltou",
+      B: "Ele faltou porquê estava doente",
+      C: "Não entendi o porquê da decisão",
+      D: "Porquê você não veio?"
+    },
     answer: "C",
-    hint: "Inaugurada em 1960."
+    hint: "Substantivo."
   },
   {
-    text: "Quanto é 9 + 6?",
-    options: { A: "14", B: "15", C: "16", D: "17" },
-    answer: "B",
-    hint: "Mais que 14."
-  },
-  {
-    text: "Animal conhecido como rei da selva?",
-    options: { A: "Tigre", B: "Leão", C: "Onça", D: "Elefante" },
-    answer: "B",
-    hint: "Tem juba."
-  },
-  {
-    text: "Qual oceano banha o Brasil?",
-    options: { A: "Pacífico", B: "Índico", C: "Atlântico", D: "Ártico" },
-    answer: "C",
-    hint: "Leste do país."
-  },
-  {
-    text: "Quanto é 10 × 10?",
-    options: { A: "10", B: "50", C: "100", D: "1000" },
-    answer: "C",
-    hint: "Base decimal."
-  },
-  {
-    text: "Feminino de ator?",
-    options: { A: "Atora", B: "Atriz", C: "Atores", D: "Artista" },
-    answer: "B",
-    hint: "Cinema."
-  },
-  {
-    text: "Instrumento que mede temperatura?",
-    options: { A: "Barômetro", B: "Termômetro", C: "Régua", D: "Higrômetro" },
-    answer: "B",
-    hint: "Febre."
-  },
-  {
-    text: "Cor da bandeira que representa florestas?",
-    options: { A: "Azul", B: "Amarelo", C: "Verde", D: "Branco" },
-    answer: "C",
-    hint: "Natureza."
-  },
-  {
-    text: "Qual desses é um verbo?",
-    options: { A: "Casa", B: "Bonito", C: "Correr", D: "Azul" },
-    answer: "C",
-    hint: "Ação."
-  },
-  {
-    text: "Maior planeta do sistema solar?",
-    options: { A: "Terra", B: "Saturno", C: "Júpiter", D: "Netuno" },
-    answer: "C",
-    hint: "Gigante gasoso."
-  },
-  {
-    text: "Quanto é 5²?",
-    options: { A: "10", B: "15", C: "25", D: "30" },
-    answer: "C",
-    hint: "5 × 5."
-  },
-  {
-    text: "Estado físico do gelo?",
-    options: { A: "Líquido", B: "Gasoso", C: "Sólido", D: "Plasma" },
-    answer: "C",
-    hint: "Frio."
+    text: "Em que ano ocorreu a Revolução Constitucionalista de São Paulo?",
+    options: { A: "1930", B: "1934", C: "1929", D: "1932" },
+    answer: "D",
+    hint: "Era Vargas."
   },
 
-  // -------- MÉDIAS (21–40)
   {
-    text: "Gás essencial para respiração humana?",
-    options: { A: "Nitrogênio", B: "Oxigênio", C: "Hidrogênio", D: "CO₂" },
-    answer: "B",
-    hint: "Presente no ar."
-  },
-  {
-    text: "Raiz quadrada de 144?",
-    options: { A: "10", B: "11", C: "12", D: "14" },
-    answer: "C",
-    hint: "12 × 12."
-  },
-  {
-    text: "Frase correta:",
-    options: {
-      A: "Haviam muitas pessoas",
-      B: "Havia muitas pessoas",
-      C: "Houveram pessoas",
-      D: "Haviam gente"
-    },
-    answer: "B",
-    hint: "Verbo impessoal."
-  },
-  {
-    text: "Ano da abolição da escravidão no Brasil?",
-    options: { A: "1822", B: "1850", C: "1888", D: "1891" },
-    answer: "C",
-    hint: "Lei Áurea."
-  },
-  {
-    text: "Órgão que filtra o sangue?",
-    options: { A: "Pulmão", B: "Fígado", C: "Rim", D: "Coração" },
-    answer: "C",
-    hint: "São dois."
-  },
-  {
-    text: "15% de 200 é:",
-    options: { A: "20", B: "25", C: "30", D: "35" },
-    answer: "C",
-    hint: "10% é 20."
-  },
-  {
-    text: "Palavra que é advérbio:",
-    options: { A: "Rápido", B: "Rapidamente", C: "Rapidez", D: "Rápida" },
-    answer: "B",
-    hint: "-mente."
-  },
-  {
-    text: "Quem proclamou a independência do Brasil?",
-    options: { A: "Dom João VI", B: "Dom Pedro I", C: "Tiradentes", D: "Vargas" },
-    answer: "B",
-    hint: "Ipiranga."
-  },
-  {
-    text: "Planeta famoso por seus anéis?",
-    options: { A: "Marte", B: "Saturno", C: "Júpiter", D: "Urano" },
-    answer: "B",
-    hint: "Anéis visíveis."
-  },
-  {
-    text: "Quanto é 3³?",
-    options: { A: "9", B: "18", C: "27", D: "30" },
-    answer: "C",
-    hint: "3×3×3."
-  },
-  {
-    text: "Sujeito oculto aparece em:",
-    options: {
-      A: "Eu estudo",
-      B: "Choveu muito",
-      C: "Estudei ontem",
-      D: "As crianças brincam"
-    },
-    answer: "C",
-    hint: "Não está escrito."
-  },
-  {
-    text: "Primeira capital do Brasil?",
-    options: { A: "Rio de Janeiro", B: "Salvador", C: "São Paulo", D: "Recife" },
-    answer: "B",
-    hint: "Colonial."
-  },
-  {
-    text: "Sistema responsável pela digestão?",
-    options: { A: "Respiratório", B: "Digestório", C: "Nervoso", D: "Circulatório" },
-    answer: "B",
-    hint: "Alimentos."
-  },
-  {
-    text: "Quanto é 40% de 50?",
-    options: { A: "15", B: "20", C: "25", D: "30" },
-    answer: "B",
-    hint: "Metade de 40."
-  },
-  {
-    text: "Classe gramatical de “feliz”:",
-    options: { A: "Verbo", B: "Substantivo", C: "Adjetivo", D: "Advérbio" },
-    answer: "C",
-    hint: "Qualidade."
-  },
-  {
-    text: "Tratado que dividiu terras entre Portugal e Espanha?",
-    options: {
-      A: "Versalhes",
-      B: "Tordesilhas",
-      C: "Madrid",
-      D: "Utrecht"
-    },
-    answer: "B",
-    hint: "Linha imaginária."
-  },
-  {
-    text: "Principal fonte de energia da Terra?",
-    options: { A: "Lua", B: "Sol", C: "Vento", D: "Água" },
-    answer: "B",
-    hint: "Estrela."
-  },
-  {
-    text: "Quanto é 6²?",
-    options: { A: "12", B: "24", C: "36", D: "48" },
-    answer: "C",
-    hint: "6×6."
-  },
-  {
-    text: "Coletivo de peixes?",
-    options: { A: "Manada", B: "Cardume", C: "Alcateia", D: "Bando" },
-    answer: "B",
-    hint: "No mar."
-  },
-  {
-    text: "Movimento artístico de 1922 no Brasil?",
-    options: {
-      A: "Barroco",
-      B: "Romantismo",
-      C: "Modernismo",
-      D: "Realismo"
-    },
-    answer: "C",
-    hint: "Semana de Arte."
-  },
-
-  // -------- DIFÍCEIS (41–50)
-  {
-    text: "Função principal dos ribossomos?",
-    options: {
-      A: "Produzir energia",
-      B: "Produzir proteínas",
-      C: "Armazenar DNA",
-      D: "Controlar célula"
-    },
-    answer: "B",
-    hint: "Síntese."
-  },
-  {
-    text: "Quanto é 3² + 4²?",
-    options: { A: "14", B: "25", C: "49", D: "7" },
-    answer: "B",
-    hint: "Pitágoras."
-  },
-  {
-    text: "Uso correto do 'porque':",
-    options: {
-      A: "Não fui porque estava doente",
-      B: "Porque você veio?",
-      C: "Não sei porque.",
-      D: "Estudo porque."
-    },
+    text: "Qual gás compõe a maior parte da atmosfera terrestre?",
+    options: { A: "Nitrogênio", B: "Oxigênio", C: "Gás carbônico", D: "Hélio" },
     answer: "A",
-    hint: "Causa."
+    hint: "Mais de 70%."
   },
   {
-    text: "Primeiro ciclo econômico do Brasil?",
-    options: { A: "Café", B: "Ouro", C: "Açúcar", D: "Borracha" },
-    answer: "C",
-    hint: "Colonial."
-  },
-  {
-    text: "Quem propôs a teoria da relatividade?",
-    options: { A: "Newton", B: "Darwin", C: "Einstein", D: "Galileu" },
-    answer: "C",
-    hint: "E=mc²."
-  },
-  {
-    text: "Capital do Brasil antes de Brasília?",
-    options: {
-      A: "Salvador",
-      B: "São Paulo",
-      C: "Rio de Janeiro",
-      D: "Recife"
-    },
-    answer: "C",
-    hint: "Até 1960."
-  },
-  {
-    text: "Quanto é 1/4 de 0,8?",
-    options: { A: "0,1", B: "0,2", C: "0,3", D: "0,4" },
+    text: "Quanto é 2³ × 3²?",
+    options: { A: "36", B: "72", C: "18", D: "24" },
     answer: "B",
-    hint: "Divisão."
+    hint: "Potências."
   },
   {
-    text: "Figura de linguagem em 'choveu lágrimas':",
-    options: {
-      A: "Ironia",
-      B: "Metáfora",
-      C: "Hipérbole",
-      D: "Antítese"
-    },
-    answer: "B",
+    text: "Qual figura de linguagem ocorre em 'o tempo voa'?",
+    options: { A: "Hipérbole", B: "Ironia", C: "Metáfora", D: "Antítese" },
+    answer: "C",
     hint: "Sentido figurado."
   },
   {
-    text: "Sistema que coordena ações do corpo?",
-    options: {
-      A: "Digestório",
-      B: "Respiratório",
-      C: "Nervoso",
-      D: "Circulatório"
-    },
-    answer: "C",
-    hint: "Cérebro."
+    text: "Qual tratado redefiniu fronteiras do Brasil em 1750?",
+    options: { A: "Tordesilhas", B: "Versalhes", C: "Utrecht", D: "Madrid" },
+    answer: "D",
+    hint: "Portugal e Espanha."
+  },
+
+  {
+    text: "Qual organela é responsável pela respiração celular?",
+    options: { A: "Núcleo", B: "Mitocôndria", C: "Ribossomo", D: "Lisossomo" },
+    answer: "B",
+    hint: "Produz energia."
   },
   {
-    text: "Ano da Proclamação da República no Brasil?",
-    options: { A: "1822", B: "1888", C: "1889", D: "1891" },
+    text: "Quanto é √(81 × 16)?",
+    options: { A: "18", B: "24", C: "36", D: "12" },
+    answer: "A",
+    hint: "Raiz do produto."
+  },
+  {
+    text: "Qual alternativa apresenta um período composto?",
+    options: {
+      A: "O sol brilhou forte",
+      B: "Choveu ontem",
+      C: "Estudei e passei",
+      D: "A aula terminou"
+    },
     answer: "C",
-    hint: "Um ano após a abolição."
+    hint: "Dois verbos."
+  },
+  {
+    text: "Quem liderou a Inconfidência Mineira?",
+    options: { A: "Dom Pedro I", B: "José Bonifácio", C: "Tiradentes", D: "Getúlio Vargas" },
+    answer: "C",
+    hint: "Símbolo nacional."
+  },
+
+  {
+    text: "Qual é a unidade de medida da força no SI?",
+    options: { A: "Watt", B: "Joule", C: "Pascal", D: "Newton" },
+    answer: "D",
+    hint: "Lei da Física."
+  },
+  {
+    text: "Quanto é 25% de 1,6?",
+    options: { A: "0,2", B: "0,3", C: "0,4", D: "0,5" },
+    answer: "C",
+    hint: "Um quarto."
+  },
+  {
+    text: "Qual classe gramatical é a palavra 'embora'?",
+    options: { A: "Advérbio", B: "Conjunção", C: "Preposição", D: "Interjeição" },
+    answer: "B",
+    hint: "Ideia de concessão."
+  },
+  {
+    text: "Em que ano foi promulgada a Constituição de 1988?",
+    options: { A: "1985", B: "1990", C: "1986", D: "1988" },
+    answer: "D",
+    hint: "Redemocratização."
+  },
+
+  {
+    text: "Qual camada da Terra é composta principalmente por magma?",
+    options: { A: "Manto", B: "Crosta", C: "Núcleo externo", D: "Litosfera" },
+    answer: "A",
+    hint: "Entre crosta e núcleo."
+  },
+  {
+    text: "Quanto é 7² − 5²?",
+    options: { A: "12", B: "24", C: "14", D: "49" },
+    answer: "B",
+    hint: "Diferença de quadrados."
+  },
+  {
+    text: "Qual alternativa contém um adjunto adnominal?",
+    options: {
+      A: "Ele chegou cedo",
+      B: "Gosto de música",
+      C: "Livro do aluno",
+      D: "Ela falou bem"
+    },
+    answer: "C",
+    hint: "Relaciona substantivo."
+  },
+  {
+    text: "Qual movimento artístico marcou a Semana de Arte Moderna?",
+    options: { A: "Realismo", B: "Barroco", C: "Modernismo", D: "Romantismo" },
+    answer: "C",
+    hint: "1922."
+  },
+
+  {
+    text: "Qual tipo de ligação química envolve compartilhamento de elétrons?",
+    options: { A: "Iônica", B: "Metálica", C: "Ponte de hidrogênio", D: "Covalente" },
+    answer: "D",
+    hint: "Não há transferência."
+  },
+  {
+    text: "Quanto é (2/5) de 75?",
+    options: { A: "25", B: "30", C: "35", D: "40" },
+    answer: "B",
+    hint: "Fração."
+  },
+  {
+    text: "Qual voz verbal está em 'O livro foi lido'?",
+    options: { A: "Ativa", B: "Reflexiva", C: "Passiva", D: "Recíproca" },
+    answer: "C",
+    hint: "Sujeito paciente."
+  },
+  {
+    text: "Qual presidente instituiu o Estado Novo?",
+    options: { A: "Juscelino Kubitschek", B: "Getúlio Vargas", C: "Floriano Peixoto", D: "Collor" },
+    answer: "B",
+    hint: "1937."
+  },
+
+  {
+    text: "Qual fenômeno explica o desvio da luz em campos gravitacionais?",
+    options: { A: "Refração", B: "Difração", C: "Relatividade", D: "Reflexão" },
+    answer: "C",
+    hint: "Einstein."
+  },
+  {
+    text: "Quanto é 0,125 em forma de fração?",
+    options: { A: "1/4", B: "1/8", C: "1/6", D: "1/5" },
+    answer: "B",
+    hint: "Potência de 2."
+  },
+  {
+    text: "Qual termo NÃO é uma conjunção?",
+    options: { A: "Mas", B: "Porque", C: "Embora", D: "Muito" },
+    answer: "D",
+    hint: "Intensidade."
+  },
+  {
+    text: "Em que ano ocorreu o golpe militar no Brasil?",
+    options: { A: "1964", B: "1968", C: "1954", D: "1970" },
+    answer: "A",
+    hint: "Ditadura."
+  },
+
+  {
+    text: "Qual sistema regula os hormônios do corpo?",
+    options: { A: "Nervoso", B: "Digestório", C: "Endócrino", D: "Respiratório" },
+    answer: "C",
+    hint: "Glândulas."
+  },
+  {
+    text: "Quanto é 9³?",
+    options: { A: "729", B: "243", C: "81", D: "512" },
+    answer: "A",
+    hint: "9 × 9 × 9."
+  },
+  {
+    text: "Qual palavra é um pronome relativo?",
+    options: { A: "Quem", B: "Muito", C: "Sempre", D: "Longe" },
+    answer: "A",
+    hint: "Retoma termo."
+  },
+  {
+    text: "Qual foi o último presidente do regime militar?",
+    options: { A: "Costa e Silva", B: "Geisel", C: "Figueiredo", D: "Médici" },
+    answer: "C",
+    hint: "Abertura política."
   }
 ];
-
-// ==================================================
-// LÓGICA DO JOGO (10s + Próxima)
-// ==================================================
-let current = 0;
-let timer;
-let timeLeft;
-let answered = false;
-
-const startBtn = document.getElementById("startBtn");
-const nextBtn = document.getElementById("nextBtn");
-const startScreen = document.getElementById("startScreen");
-const quizScreen = document.getElementById("quizScreen");
-
-const questionEl = document.getElementById("question");
-const optionsEl = document.getElementById("options");
-const timerEl = document.getElementById("timer");
-const hintBtn = document.getElementById("hintBtn");
-const revealBtn = document.getElementById("revealBtn");
-const feedback = document.getElementById("feedback");
-const actions = document.querySelector(".actions");
-
-startBtn.onclick = () => {
-  startScreen.classList.add("hidden");
-  quizScreen.classList.remove("hidden");
-  loadQuestion();
-};
-
-function loadQuestion() {
-  answered = false;
-  nextBtn.classList.add("hidden");
-  optionsEl.innerHTML = "";
-  feedback.textContent = "";
-
-  const q = questions[current];
-  questionEl.textContent = q.text;
-
-  optionsEl.classList.add("hidden");
-  actions.classList.add("hidden");
-
-  startTimer();
-}
-
-function startTimer() {
-  clearInterval(timer);
-  timeLeft = 10;
-  timerEl.textContent = `${timeLeft}s`;
-
-  timer = setInterval(() => {
-    timeLeft--;
-    timerEl.textContent = `${timeLeft}s`;
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      showOptions();
-    }
-  }, 1000);
-}
-
-function showOptions() {
-  const q = questions[current];
-  Object.entries(q.options).forEach(([key, value]) => {
-    const btn = document.createElement("button");
-    btn.className = "option-btn";
-    btn.textContent = `${key}) ${value}`;
-    btn.onclick = () => selectOption(btn, key);
-    optionsEl.appendChild(btn);
-  });
-
-  optionsEl.classList.remove("hidden");
-  actions.classList.remove("hidden");
-}
-
-function selectOption(button, selected) {
-  if (answered) return;
-  answered = true;
-
-  const correct = questions[current].answer;
-  if (selected === correct) {
-    button.classList.add("correct");
-    feedback.textContent = "Resposta correta!";
-  } else {
-    button.classList.add("wrong");
-    feedback.textContent = `Resposta correta: ${correct}`;
-  }
-  nextBtn.classList.remove("hidden");
-}
-
-hintBtn.onclick = () => {
-  feedback.textContent = "Dica: " + questions[current].hint;
-};
-
-revealBtn.onclick = () => {
-  feedback.textContent = "Resposta correta: " + questions[current].answer;
-  nextBtn.classList.remove("hidden");
-};
-
-nextBtn.onclick = () => {
-  current++;
-  if (current >= questions.length) {
-    questionEl.textContent = "Fim do jogo 🎉";
-    optionsEl.innerHTML = "";
-    actions.classList.add("hidden");
-    nextBtn.classList.add("hidden");
-    timerEl.textContent = "";
-    feedback.textContent = "Vocês completaram as 50 perguntas!";
-    return;
-  }
-  loadQuestion();
-};
