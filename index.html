@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Quiz Educacional</title>
-  <link rel="stylesheet" href="quiz.css">
+  <link rel="stylesheet" href="quiz.css" />
 </head>
 <body>
 
-<div class="game">
+<div class="app">
 
-  <button id="startBtn">Iniciar Jogo</button>
+  <div class="start-screen" id="startScreen">
+    <h1>Quiz</h1>
+    <button id="startBtn">Iniciar jogo</button>
+  </div>
 
-  <div id="quiz" class="hidden">
-    <div id="timer"></div>
+  <div class="quiz-screen hidden" id="quizScreen">
+    <div class="top">
+      <span id="timer">15s</span>
+    </div>
 
     <h2 id="question"></h2>
 
-    <div id="options" class="hidden"></div>
+    <div id="options" class="options hidden"></div>
 
-    <input type="text" id="answerInput" placeholder="Digite A, B, C ou D" class="hidden">
+    <input
+      type="text"
+      id="answerInput"
+      placeholder="Digite A, B, C ou D"
+      maxlength="1"
+      class="hidden"
+    />
 
-    <div class="controls hidden">
+    <div class="actions hidden">
       <button id="hintBtn">Dica</button>
       <button id="revealBtn">Revelar</button>
     </div>
@@ -33,3 +45,4 @@
 <script src="quiz.js"></script>
 </body>
 </html>
+
