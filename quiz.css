@@ -45,6 +45,7 @@ button {
   background: #ffffff;
   color: #000;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 button:active {
@@ -78,9 +79,8 @@ button:active {
 /* OPTIONS */
 .options {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .option-btn {
@@ -104,12 +104,17 @@ button:active {
 .actions {
   display: flex;
   gap: 10px;
-  margin-bottom: 12px;
 }
 
 .actions button {
   background: #333;
   color: #fff;
+}
+
+#nextBtn {
+  background: #f5c542;
+  color: #000;
+  font-weight: bold;
 }
 
 #feedback {
