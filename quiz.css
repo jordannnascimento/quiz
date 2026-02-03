@@ -35,12 +35,13 @@ html, body {
   margin-bottom: 24px;
 }
 
+/* BUTTONS */
 button {
   width: 100%;
   padding: 16px;
   font-size: 16px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #ffffff;
   color: #000;
   cursor: pointer;
@@ -74,28 +75,32 @@ button:active {
   text-align: center;
 }
 
+/* OPTIONS */
 .options {
-  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-.options div {
+.option-btn {
   background: #1a1a1a;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
-
-input {
-  width: 100%;
+  color: #fff;
   padding: 14px;
+  border-radius: 10px;
   font-size: 16px;
-  border-radius: 8px;
-  border: none;
-  text-align: center;
-  margin-bottom: 16px;
+  text-align: left;
 }
 
+.option-btn.correct {
+  background: #2e7d32;
+}
+
+.option-btn.wrong {
+  background: #c62828;
+}
+
+/* ACTIONS */
 .actions {
   display: flex;
   gap: 10px;
@@ -103,7 +108,6 @@ input {
 }
 
 .actions button {
-  flex: 1;
   background: #333;
   color: #fff;
 }
