@@ -53,7 +53,7 @@ function loadQuestion() {
 function startReadingTimer(textLength) {
   clearInterval(timer);
 
-  timeLeft = textLength > 120 ? 20 : 15;
+  timeLeft = textLength > 120 ? 20 : 10;
   timerEl.textContent = `${timeLeft}s`;
 
   timer = setInterval(() => {
@@ -106,5 +106,6 @@ revealBtn.onclick = () => {
   feedback.textContent =
     "Resposta correta: " + questions[current].answer;
 };
+
 
 
