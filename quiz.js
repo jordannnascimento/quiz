@@ -1,15 +1,22 @@
 const questions = [
   {
     text: "Qual órgão do corpo humano é responsável por bombear o sangue?",
-    options: ["A) Pulmão", "B) Cérebro", "C) Coração", "D) Fígado"],
+    options: {
+      A: "Pulmão",
+      B: "Cérebro",
+      C: "Coração",
+      D: "Fígado"
+    },
     answer: "C",
     hint: "Trabalha sem parar."
   }
+  // 👉 depois você adiciona o resto
 ];
 
 let current = 0;
 let timer;
 let timeLeft;
+let answered = false;
 
 const startBtn = document.getElementById("startBtn");
 const startScreen = document.getElementById("startScreen");
@@ -18,7 +25,6 @@ const quizScreen = document.getElementById("quizScreen");
 const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const timerEl = document.getElementById("timer");
-const answerInput = document.getElementById("answerInput");
 const hintBtn = document.getElementById("hintBtn");
 const revealBtn = document.getElementById("revealBtn");
 const feedback = document.getElementById("feedback");
@@ -31,15 +37,15 @@ startBtn.onclick = () => {
 };
 
 function loadQuestion() {
+  answered = false;
   const q = questions[current];
 
   questionEl.textContent = q.text;
-  optionsEl.innerHTML = q.options.map(o => `<div>${o}</div>`).join("");
+  optionsEl.innerHTML = "";
+  feedback.textContent = "";
 
   optionsEl.classList.add("hidden");
-  answerInput.classList.add("hidden");
   actions.classList.add("hidden");
-  feedback.textContent = "";
 
   startReadingTimer(q.text.length);
 }
@@ -62,9 +68,34 @@ function startReadingTimer(textLength) {
 }
 
 function showOptions() {
+  const q = questions[current];
+
+  Object.entries(q.options).forEach(([key, value]) => {
+    const btn = document.createElement("button");
+    btn.className = "option-btn";
+    btn.textContent = `${key}) ${value}`;
+
+    btn.onclick = () => selectOption(btn, key);
+    optionsEl.appendChild(btn);
+  });
+
   optionsEl.classList.remove("hidden");
-  answerInput.classList.remove("hidden");
   actions.classList.remove("hidden");
+}
+
+function selectOption(button, selected) {
+  if (answered) return;
+  answered = true;
+
+  const correct = questions[current].answer;
+
+  if (selected === correct) {
+    button.classList.add("correct");
+    feedback.textContent = "Resposta correta!";
+  } else {
+    button.classList.add("wrong");
+    feedback.textContent = `Resposta correta: ${correct}`;
+  }
 }
 
 hintBtn.onclick = () => {
@@ -72,14 +103,8 @@ hintBtn.onclick = () => {
 };
 
 revealBtn.onclick = () => {
-  feedback.textContent = "Resposta correta: " + questions[current].answer;
+  feedback.textContent =
+    "Resposta correta: " + questions[current].answer;
 };
 
-answerInput.addEventListener("input", () => {
-  answerInput.value = answerInput.value.toUpperCase();
-});
-
-revealBtn.onclick = () => {
-  feedback.textContent = "Resposta correta: " + questions[current].answer;
-};
 
